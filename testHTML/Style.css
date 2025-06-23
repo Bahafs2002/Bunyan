@@ -1,0 +1,468 @@
+
+
+
+/* ========== BODY ========== */
+body {
+
+font-family: 'Cairo', Arial, sans-serif;
+    direction: rtl;
+    background: linear-gradient(180deg, #001f3f 0%, #004080 50%, #017786 100%);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #001f3f 0%, #004080 50%, #017786 100%);
+    color: #d1e4f6;
+    display: flex;
+      flex-direction: column;
+      direction: ltr;
+  }
+  
+    /* ========== HEADER ========== */
+  
+  header {
+    background-color: transparent;
+    color: #d1e4f6;
+    padding: 15px 8px; /* or 20px*/
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+   
+      /* ========== NAV ========== */
+   nav {
+      background: transparent;  /* #0f2a40;*/
+      padding: 10px;
+      text-align: center;
+    }
+     /* ========== NAV a ========== */
+
+     nav a {
+    color: #a9c9ff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+     nav a:hover {
+    color: #f0f8ff;
+  }
+
+   /* ========== brand-title ========== */
+  .brand-title {
+  color: #d1e4f6;
+  text-decoration: none;
+}
+
+.brand-title:hover {
+  color: #ffffff;
+}
+
+  #langDropdown {
+  z-index: 9999 !important;
+}
+
+  
+  /* ========== fullscreen-image ========== */
+  .fullscreen-image {
+    width: 100vw;     /* عرض كامل النافذة */
+    height: 100vh;    /* ارتفاع كامل النافذة */
+    overflow: hidden;
+    position: relative;
+  }
+  .fullscreen-image img {
+    width: auto;      /* نخلي العرض تلقائي */
+    height: 120vh;     /* نخلي الارتفاع 90% من الشاشة عشان تصغر شوي */
+    max-width: 100%;  /* لا تزيد عن عرض الصفحة */
+    display: block;
+    margin: 0 auto;   /* توسيط الصورة أفقياً */
+    object-fit: contain;  /* تخلي الصورة كاملة داخل الإطار */
+    filter: brightness(70%);
+  }
+  
+   /* ========== scroll-down ========== */
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    color: #a9c9ff;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    user-select: none;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-15px); }
+  }
+  /* ========== main ========== */
+  main {
+    max-width: 900px; /* or 600px */
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.65); /* or background: #122b55; */
+    padding: 30px 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 10px; /* or 12px; */
+    color: #d1e4f6;
+    flex: 1;
+  }
+   
+      /* ==========  h1, h2 ========== */
+      
+  h1, h2 {
+    color: #a9c9ff;
+  }
+
+    /* ==========  ul li ========== */
+
+  ul li {
+    margin: 10px 0;
+    line-height: 1.8;
+  }
+
+    /* ==========  #contact-form ========== */
+
+  #contact-form {
+    background: #132635;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    max-width: 600px;
+    margin: 40px auto;
+    color: #d1e4f6;
+  }
+
+  /* ==========  h1, h2 ========== */
+  #contact-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+
+  /* ==========  #contact-form input, #contact-form textarea ========== */
+
+  #contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Cairo', Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  /* ==========  #contact-form button ========== */
+  #contact-form button {
+    margin-top: 15px;
+    background-color: #132635;    /*3399ff*/
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+ /* ==========  #confirmationMessage ========== */
+  #confirmationMessage {
+    color: #90ee90;
+    margin-top: 10px;
+    display: none;
+  }
+  /* ==========  #map-section ========== */
+  #map-section {
+    margin-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ==========  iframe  ========== */
+  iframe {
+    width: 100%;
+    height: 400px; /* ==========  or 300px  ========== */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: none;
+    margin-top: 20px;
+  }
+   /* ==========  footer  ========== */
+  footer {
+    background-color: #004d99;
+    color: #d1e4f6;
+    text-align: center;
+    padding: 15px 0 40px;
+    margin-top:  60px;  /* or  auto; */
+  }
+  /* ==========  social-icons-container  ========== */
+  .social-icons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+  }
+   /* ==========  social-icon  ========== */
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    background: #004d99;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,77,153,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d1e4f6;
+    font-size: 22px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  /* ==========  social-icon:hover  ========== */
+  .social-icon:hover {
+    background: #3399ff;
+    transform: translateY(-3px);
+  }
+  
+  /* ==========  h1 a  ========== */
+      h1 a {
+      color: #d1e4f6;
+      text-decoration: none;
+      font-size: 1.8rem;
+    }
+
+
+  /* ألوان الهوفر الخاصة بكل منصة */
+  .facebook:hover { background: #3b5998; }
+.x-twitter:hover { background: #000; }
+.linkedin:hover { background: #0077b5; }
+.instagram:hover { background: #5a2a68; }
+.youtube:hover { background: #cc0000; }
+.snapchat:hover { background: #fff200; color: #333; }
+.tiktok:hover { background: #000; }
+
+/* ==========  whatsapp-fixed  ========== */
+  /* واتساب ثابت */
+  .whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* ==========  button  ========== */
+  button {
+    margin-top: 15px;
+    background-color: #3399ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  /* ==========  a.back-link  ========== */
+  a.back-link {
+    display: block;
+    max-width: 600px;
+    margin: 20px auto 0;
+    color: #3399ff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+/* ==========  #contact-header  ========== */
+  #contact-header {
+    display: flex;
+    align-items:center;
+    justify-content:flex-start; /* أو حسب تصميمك */
+    padding: 15px 20px;
+    gap: 20px;
+    background-color: #132635;
+    color: #d1e4f6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  /* ==========  contact-logo  ========== */
+  .contact-logo {
+    height:150px; /* حجم مناسب للوقو */
+    width: auto;
+    margin-right: 15px; /* مسافة بين اللوقو والعنوان */
+  }
+
+  
+ /* ==========  content-wrapper  ========== */
+ .content-wrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 40px;
+      gap: 40px;
+    }
+ 
+    /* ==========  logo-side  ========== */
+    /*.logo-side {
+      flex: 1;
+      background: url('bunyan-transparent.png') no-repeat center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left center;
+      min-height: 500px;
+    }*/
+    .logo-side {
+  flex: 1;
+  background: url('bunyan-transparent.png') no-repeat center center;
+  background-size: contain;
+  min-height: 500px;
+}
+
+body[dir="rtl"] .logo-side {
+  background-position: left center;
+}
+
+body[dir="ltr"] .logo-side {
+  background-position: right center;
+}
+  
+    /* ==========  h2  ========== */
+    h2 {
+      color: #a9c9ff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+   /* ==========  p  ========== */
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+  /* ==========  label, p ========== */
+    label, p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* ==========  input, textarea ========== */
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Cairo', sans-serif;
+    }
+    
+    /* ==========  faq-accordion ========== */
+ .faq-accordion {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 12px;
+    }
+  
+    /* ==========  faq-item ========== */
+    .faq-item {
+      border-bottom: 1px solid #00bcd4;
+    }
+    
+    /* ==========  faq-question ========== */
+    .faq-question {
+      width: 100%;
+      padding: 12px 16px;
+      text-align: left;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+
+    /* ==========  faq-question:hover ========== */
+    .faq-question:hover {
+      background: rgba(0,0,0,0.2);
+    }
+
+    /* ==========  faq-answer ========== */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #ddd;
+      padding: 0 16px;
+    }
+  
+
+    /* ==========  faq-answer.open ========== */
+    .faq-answer.open {
+      padding: 10px 16px;
+      max-height: 200px;
+    }
+
+    /* ==========  icon ========== */
+    .icon {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    
+   
+
+  
+
+   
+
+   
+
+    
+
+
+    
+
+  
+
+    
+
+  
+
+   
+
+  
+
+    
+
+    
+
+
+
+   
+
+    
+
+   
+
+  
+
+    
+

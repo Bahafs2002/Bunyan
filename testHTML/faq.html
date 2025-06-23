@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الأسئلة المتكررة - بنيان المحمودية العقارية</title>
+   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+     <div style="position: relative; direction: ltr; text-align: left; margin: 10px 20px;">
+  <div style="position: relative;">
+    <button onclick="toggleDropdown()" style="display: flex; align-items: center; gap: 8px; background: #0f2a40; color: white; border: 1px solid #ccc; border-radius: 8px; padding: 6px 12px; cursor: pointer;">
+      <img src="https://flagcdn.com/w40/sa.png" style="width: 22px; height: 16px; border-radius: 3px;" />
+      <span>Arabic</span>
+      <span style="font-size: 10px;">▼</span>
+    </button>
+    <div id="langDropdown" style="display: none; position: absolute; top: 40px; left: 0; background: white; border: 1px solid #ccc; border-radius: 6px; padding: 8px; min-width: 130px; z-index: 1000;">
+      <!-- ✅ هنا السطر بعد التعديل -->
+      <a href="faq-en.html" id="langLink" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #333; padding: 5px 0;">
+        <img src="https://flagcdn.com/w40/us.png" style="width: 22px; height: 16px; border-radius: 3px;" />
+        English
+      </a>
+    </div>
+  </div>
+</div>
+
+ <header>
+    <h1><a href="index.html">بنيان المحموديه العقاريه</a></h1>
+    <nav>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="vision.html">رؤيتنا</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="faq.html">الاسئله الشائعه</a>
+    </nav>
+  </header>>
+
+<div class="faq-accordion">
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>ما الخدمات العقارية التي تقدمها بنيان المحمودية العقارية؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">نقدم خدمات التطوير العقاري، التسويق، إدارة الأملاك، والاستشارات العقارية المتخصصة.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>كيف تساعد بياناتنا المستثمرين على اتخاذ قرارات دقيقة؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">نقدم تحليلات دقيقة وبيانات حديثة لدعم قرارات المستثمرين بثقة وشفافية.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>ما الذي يميز بنيان المحمودية العقارية عن غيرها؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">نتميز بالشفافية، الابتكار، واستخدام أحدث التقنيات لخدمة عملائنا.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>هل توفر بنيان المحمودية بيانات عن فرص البيع والشراء والإيجار؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">نعم، نوفر بيانات تفصيلية عن فرص البيع والشراء والإيجار في مختلف المناطق.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>كيف أستطيع التواصل مع بنيان المحمودية العقارية؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني المذكور في الموقع.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>هل يوجد تطبيق خاص ببنيان المحمودية العقارية؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">نعمل حالياً على تطوير تطبيق يتيح لك الوصول إلى بياناتنا وخدماتنا بسهولة.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>كيف يمكنني الاشتراك أو طلب استشارة عقارية؟</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">تواصل معنا عبر الموقع أو اتصل بنا مباشرة لنقدم لك الدعم المطلوب.</div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector('.icon');
+    if (answer.classList.contains('open')) {
+      answer.classList.remove('open');
+      icon.textContent = '+';
+    } else {
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.icon').forEach(i => i.textContent = '+');
+      answer.classList.add('open');
+      icon.textContent = '-';
+    }
+  });
+});
+</script>
+
+<footer>
+    &copy; 2025 Bunyan Al-Mahmoudiyah Real Estate - All Rights Reserved
+    <div class="social-icons-container">
+      <a href="https://www.facebook.com/BunyanMRE" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/bunyanmre" target="_blank" class="social-icon x-twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/bunyan-mre-b7a389357" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/bunyanmre" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@bunyanmre" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.snapchat.com/explore/BunyanMRE" target="_blank" class="social-icon snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="https://www.tiktok.com/@bunyanmre" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+<a href="https://wa.me/966539196604?text=مرحبا%20اريد%20مساعدتك" target="_blank" class="whatsapp-fixed" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
